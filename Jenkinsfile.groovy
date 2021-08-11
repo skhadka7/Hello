@@ -13,12 +13,12 @@ node
     
     stage("publish the artifactory"){
         sh "chmod -R 755 $WORKSPACE"
-        def server = Artifactory.newServer url: 'https://chbalaji080186.jfrog.io/artifactory', username: 'sanjeevkhadka86@gmail.com', password: 'Password1!'
+        def server = Artifactory.newServer url: 'https://sanjeevdevop.jfrog.io/artifactory', username: 'sanjeevkhadka86@gmail.com', password: 'Password1!'
         def uploadSpec = """{
               "files": [
             {
-                "pattern": "$WORKSPACE/build/libs/HelloWorld-0.0.1-SNAPSHOT.war",
-                "target": "libs-snapshot-local/application1/application1-${version}.${BUILD_NUMBER}.war"
+                "pattern": "build/libs/HelloWorld-0.0.1-SNAPSHOT.war",
+                "target": "libs-release-local/helloworld/helloworld-${version}.${BUILD_NUMBER}.war"
            }
                      ]
 }"""
