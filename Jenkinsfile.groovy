@@ -26,10 +26,10 @@ server.upload spec: uploadSpec
     }
     stage("deploy via anisble tower"){
         ansibleTower(
-            towerServer: 'ansibleTower',
-            jobTemplate: 'tomcatdeployment',
+            towerServer: 'Ansibletower',
+            jobTemplate: 'tomcatdeploy',
             importTowerLogs: true,
-            inventory: 'traininginventory',
+            inventory: 'cginventory',
             jobTags: '',
             limit: '',
             removeColor: false,
