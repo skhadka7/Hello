@@ -12,7 +12,7 @@ node
     }
     
     stage("publish the artifactory"){
-        sh "chmod -R 755 $WORKSPACE"
+        
         def server = Artifactory.newServer url: 'https://sanjeevdevop.jfrog.io/artifactory', username: 'sanjeevkhadka86@gmail.com', password: 'Password1!'
         def uploadSpec = """{
               "files": [
