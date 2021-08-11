@@ -2,7 +2,7 @@ node
 {
     stage("checkout"){
         
-        git credentialsId: 'a449156b-6917-4a4c-b4b7-4598cbb73788', url: 'https://github.com/balaji2003engg/helloworld.git'
+        git credentialsId: 'a449156b-6917-4a4c-b4b7-4598cbb73788', url: 'https://github.com/skhadka7/Hello.git'
     }
     
     stage("build"){
